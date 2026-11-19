@@ -1,8 +1,8 @@
 # Personal App
-Universidade Federal do Amazonas (UFAM)
-Instituto de Ciências Exatas e Tecnologia (ICET)
-Curso: Engenharia de Software
-Local: Itacoatiara/AM
+Universidade Federal do Amazonas (UFAM) |
+Instituto de Ciências Exatas e Tecnologia (ICET) |
+Curso: Engenharia de Software |
+Local: Itacoatiara/AM |
 Ano: 2026
 
 Integrantes da equipe:
@@ -19,14 +19,15 @@ Além do agendamento, o documento do projeto prevê recursos relacionados a cada
 
 Objetivo: facilitar o contato entre alunos e personal trainers, tornando a contratação e a organização dos treinos mais práticas.
 ### 1.2. Descrição dos Usuários
-Tipo de usuário	Descrição	Principal interesse
-Aluno	Pessoa que frequenta a academia para realizar exercícios físicos.	Encontrar personal trainers, consultar horários, agendar e pagar pelos treinos.
-Personal Trainer	Profissional de Educação Física que planeja e acompanha treinos de acordo com as características individuais dos alunos.	Organizar a agenda e registrar atendimentos.
-Desenvolvedor	Responsável pela manutenção e pelo funcionamento adequado da aplicação.	Gerenciar, desenvolver e testar o sistema.
+|Tipo de usuário|	Descrição|	Principal interesse|
+|---|---|---|
+|Aluno|	Pessoa que frequenta a academia para realizar exercícios físicos.|	Encontrar personal trainers, consultar horários, agendar e pagar pelos treinos.|
+|Personal Trainer|	Profissional de Educação Física que planeja e acompanha treinos de acordo com as características individuais dos alunos.|	Organizar a agenda e registrar atendimentos.|
+|Desenvolvedor|	Responsável pela manutenção e pelo funcionamento adequado da aplicação.|Gerenciar, desenvolver e testar o sistema.|
 
 
 ## 2. Requisitos Gerais do Software
-Para identificar os requisitos, são utilizadas as siglas: RF (Requisito Funcional), RNF (Requisito Não Funcional), RN (Regra de Negócio), RU (Requisito de Usuário), RS (Requisito de Sistema) e RSW (Requisito de Software).
+Para identificar os requisitos, são utilizadas as siglas: RF (Requisito Funcional), RNF (Requisito Não Funcional), RN (Regra de Negócio).
 ### 2.1. Requisitos Funcionais
 
 | Identificador | Descrição | Escopo | Prioridade |
@@ -36,56 +37,22 @@ Para identificar os requisitos, são utilizadas as siglas: RF (Requisito Funcion
 |RF03|	Consultar agenda do personal trainer.|	Funcional|	Alta|
 |RF04|	Cancelar treinos.|	Funcional|	Média|
 |RF05|	Registrar atendimento.|	Funcional|	Alta|
-
-### Requisitos de Usuário (RU)
-|Identificador	|Descrição|
-|---|---|
-|RU01|	O usuário deve poder fazer login utilizando e-mail ou número de telefone.|
-|RU02|	O usuário deve poder escolher se entrará como aluno ou personal trainer.|
-|RU03|	O usuário deve poder escolher o método de pagamento: Pix, dinheiro ou cartão.|
-|RU04|	O usuário deve poder utilizar filtros para encontrar um resultado que o agrade.|
-|RU05|	O usuário deve poder criar seu perfil com as informações necessárias, conforme o tipo de acesso (aluno ou personal trainer).|
-
-
-### Requisitos de Sistema (RS)
-|Identificador|	Descrição|	Requisitos relacionados|
-|---|---|---|
-|RS01|	Permitir que o usuário informe e-mail ou telefone e senha para efetuar login ou cadastro de acesso.|	RU01|
-|RS02|	Permitir a seleção do perfil de acesso (aluno ou personal trainer) durante o cadastro ou a autenticação.|	RU02|
-|RS03|	Permitir pagamentos via Pix, dinheiro ou cartão, processando a transação corretamente.|	RU03|
-|RS04|	Oferecer filtros por faixa de preço, especialidade e horários disponíveis na busca por personal trainers.|	RU04|
-|RS05|	Permitir a criação e a personalização do perfil conforme o tipo de usuário.|	RU05|
-|RS06|	Permitir encerrar a sessão ativa com segurança (logout) e retornar à tela de login.	RU01| RU02|
-
-
-### Requisitos de Software (RSW)
-Identificador	Descrição	Requisitos relacionados
-RSW01	Armazenar credenciais em uma tabela de usuários no banco de dados, utilizando hash de senha e chave primária para evitar duplicidade de e-mail/telefone.	RS01
-RSW02	Validar os campos dos formulários de login e cadastro por meio de expressões regulares para formatos de e-mail, telefone e senha mínima.	RS01
-RSW03	Manter estruturas relacionais separadas para atributos de alunos e personal trainers, vinculadas à autenticação.	RS02, RS05
-RSW04	Integrar-se a APIs de gateway de pagamento para Pix e cartões, além de registrar pagamentos em dinheiro no banco de dados.	RS03
-RSW05	Executar consultas SQL otimizadas, com indexação nos campos de preço e localização para agilizar os filtros de busca.	RS04
-RSW06	Invalidar o token de sessão (JWT) e atualizar os logs de auditoria no banco de dados ao encerrar a sessão.	RS06
-RSW07	Garantir a consistência transacional dos dados mesmo em caso de falha de rede ou fechamento inesperado da sessão.	RS01, RS03, RS05
-
 ### 2.2. Requisitos Não Funcionais
-Os requisitos não funcionais estabelecem critérios de segurança, desempenho, disponibilidade, usabilidade e privacidade.
-Identificador	Descrição	Categoria	Escopo	Prioridade
-RNF01	Exigir login e senha.	Segurança	Acesso ao sistema	Alta
-RNF02	Apresentar informações em até 3 segundos.	Desempenho	Sistema	Média
-RNF03	Manter o sistema disponível durante o funcionamento da academia.	Disponibilidade	Sistema	Alta
-RNF04	Possuir interface simples e fácil de utilizar.	Usabilidade	Usuários	Média
-RNF05	Proteger os dados dos alunos.	Segurança/Privacidade	Dados dos alunos	Alta
-
-
+|Identificador|	Descrição|	Categoria|	Escopo|	Prioridade|
+|---|---|---|---|---|
+|RNF01|	Exigir login e senha.|	Segurança|	Acesso ao sistema|	Alta|
+|RNF02|	Apresentar informações em até 3 segundos.|	Desempenho|	Sistema	|Média|
+|RNF03|	Manter o sistema disponível durante o funcionamento da academia.|	|Disponibilidade|	|Sistema|	|Alta|
+|RNF04|	Possuir interface simples e fácil de utilizar.|	Usabilidade|	Usuários|	Média|
+|RNF05|	Proteger os dados dos alunos.|	Segurança/Privacidade|	Dados dos alunos|	Alta|
 ### 2.3. Regras de Negócio
-As regras de negócio definem restrições e condições que devem ser respeitadas no uso do aplicativo.
-Identificador	Descrição	Escopo	Prioridade
-RN01	Não permitir dois alunos para o mesmo personal trainer no mesmo horário.	Agendamento	Alta
-RN02	O aluno deve estar cadastrado antes de realizar um agendamento.	Cadastro	Alta
-RN03	O treino deve ser cancelado antes do horário marcado.	Agendamento	Média
-RN04	Somente usuários autorizados podem acessar dados dos alunos.	Segurança	Alta
-RN05	O personal trainer deve registrar o atendimento após o treino.	Atendimento	Alta
+|Identificador|	Descrição|	Escopo|	Prioridade|
+|---|---|---|---|
+|RN01|	Não permitir dois alunos para o mesmo personal trainer no mesmo horário.|	Agendamento|	Alta|
+|RN02|	O aluno deve estar cadastrado antes de realizar um agendamento.|	Cadastro|	Alta|
+|RN03|	O treino deve ser cancelado antes do horário marcado.|	Agendamento|	Média|
+|RN04|	Somente usuários autorizados podem acessar dados dos alunos.|	Segurança|	Alta|
+|RN05|	O personal trainer deve registrar o atendimento após o treino.|	Atendimento|	Alta|
 
 ## 3. Diagramas UML
 Os diagramas a seguir representam os três casos de uso apresentados no documento original: Cadastrar, Logar e Encerrar Sessão. Os códigos Mermaid permitem visualizar os fluxos diretamente no README do GitHub.
