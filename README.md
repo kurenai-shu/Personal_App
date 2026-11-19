@@ -1,4 +1,4 @@
-Personal App
+# Personal App
 Universidade Federal do Amazonas (UFAM)
 Instituto de Ciências Exatas e Tecnologia (ICET)
 Curso: Engenharia de Software
@@ -11,24 +11,24 @@ Integrantes da equipe:
 - Brendo de Castro
 
 
-1. Introdução
-1.1. Descrição Geral do Software
+## 1. Introdução
+### 1.1. Descrição Geral do Software
 O Personal App é um aplicativo de agendamento e pagamento de serviços de personal trainer destinado aos alunos de uma academia. Por meio da aplicação, os alunos podem encontrar profissionais, consultar horários disponíveis, agendar treinos e buscar opções que se ajustem ao seu orçamento.
 
 Além do agendamento, o documento do projeto prevê recursos relacionados a cadastro, autenticação, escolha de perfil, filtros de busca, métodos de pagamento e gerenciamento de sessões. Para os profissionais, a aplicação contempla a consulta da agenda e o registro de atendimentos.
 
 Objetivo: facilitar o contato entre alunos e personal trainers, tornando a contratação e a organização dos treinos mais práticas.
-1.2. Descrição dos Usuários
+### 1.2. Descrição dos Usuários
 Tipo de usuário	Descrição	Principal interesse
 Aluno	Pessoa que frequenta a academia para realizar exercícios físicos.	Encontrar personal trainers, consultar horários, agendar e pagar pelos treinos.
 Personal Trainer	Profissional de Educação Física que planeja e acompanha treinos de acordo com as características individuais dos alunos.	Organizar a agenda e registrar atendimentos.
 Desenvolvedor	Responsável pela manutenção e pelo funcionamento adequado da aplicação.	Gerenciar, desenvolver e testar o sistema.
 
 
-2. Requisitos Gerais do Software
+## 2. Requisitos Gerais do Software
 Para identificar os requisitos, são utilizadas as siglas: RF (Requisito Funcional), RNF (Requisito Não Funcional), RN (Regra de Negócio), RU (Requisito de Usuário), RS (Requisito de Sistema) e RSW (Requisito de Software).
-2.1. Requisitos Funcionais
-Os requisitos funcionais descrevem as funcionalidades que o software deve oferecer.
+### 2.1. Requisitos Funcionais
+
 Identificador	Descrição	Escopo	Prioridade
 RF01	Cadastrar aluno.	Funcional	Alta
 RF02	Agendar horário.	Funcional	Alta
@@ -36,11 +36,7 @@ RF03	Consultar agenda do personal trainer.	Funcional	Alta
 RF04	Cancelar treinos.	Funcional	Média
 RF05	Registrar atendimento.	Funcional	Alta
 
-
-Detalhamento complementar dos requisitos
-O documento original também descreve os requisitos em três níveis: usuário, sistema e software. Esses detalhamentos foram mantidos aqui, sem criar novas seções principais.
-
-Requisitos de Usuário (RU)
+### Requisitos de Usuário (RU)
 Identificador	Descrição
 RU01	O usuário deve poder fazer login utilizando e-mail ou número de telefone.
 RU02	O usuário deve poder escolher se entrará como aluno ou personal trainer.
@@ -49,7 +45,7 @@ RU04	O usuário deve poder utilizar filtros para encontrar um resultado que o ag
 RU05	O usuário deve poder criar seu perfil com as informações necessárias, conforme o tipo de acesso (aluno ou personal trainer).
 
 
-Requisitos de Sistema (RS)
+### Requisitos de Sistema (RS)
 Identificador	Descrição	Requisitos relacionados
 RS01	Permitir que o usuário informe e-mail ou telefone e senha para efetuar login ou cadastro de acesso.	RU01
 RS02	Permitir a seleção do perfil de acesso (aluno ou personal trainer) durante o cadastro ou a autenticação.	RU02
@@ -59,7 +55,7 @@ RS05	Permitir a criação e a personalização do perfil conforme o tipo de usu�
 RS06	Permitir encerrar a sessão ativa com segurança (logout) e retornar à tela de login.	RU01, RU02
 
 
-Requisitos de Software (RSW)
+### Requisitos de Software (RSW)
 Identificador	Descrição	Requisitos relacionados
 RSW01	Armazenar credenciais em uma tabela de usuários no banco de dados, utilizando hash de senha e chave primária para evitar duplicidade de e-mail/telefone.	RS01
 RSW02	Validar os campos dos formulários de login e cadastro por meio de expressões regulares para formatos de e-mail, telefone e senha mínima.	RS01
@@ -69,22 +65,7 @@ RSW05	Executar consultas SQL otimizadas, com indexação nos campos de preço e 
 RSW06	Invalidar o token de sessão (JWT) e atualizar os logs de auditoria no banco de dados ao encerrar a sessão.	RS06
 RSW07	Garantir a consistência transacional dos dados mesmo em caso de falha de rede ou fechamento inesperado da sessão.	RS01, RS03, RS05
 
-
-História de usuário — Realizar login
-Campo	Informação
-Título no documento original	Realizar Login (RF01)
-Prioridade	Essencial
-Estimativa	13 pontos
-Como	Usuário
-Eu quero	Acessar o sistema por meio de login.
-Para	Fazer agendamentos de personal trainer.
-
-
-Critérios de aceitação:
-1. O usuário deve informar e-mail e senha válidos.
-2. O sistema deve autenticar o usuário em até 2 segundos.
-3. Deve ser exibida uma mensagem de erro caso as credenciais sejam inválidas.
-2.2. Requisitos Não Funcionais
+### 2.2. Requisitos Não Funcionais
 Os requisitos não funcionais estabelecem critérios de segurança, desempenho, disponibilidade, usabilidade e privacidade.
 Identificador	Descrição	Categoria	Escopo	Prioridade
 RNF01	Exigir login e senha.	Segurança	Acesso ao sistema	Alta
@@ -94,7 +75,7 @@ RNF04	Possuir interface simples e fácil de utilizar.	Usabilidade	Usuários	Méd
 RNF05	Proteger os dados dos alunos.	Segurança/Privacidade	Dados dos alunos	Alta
 
 
-2.3. Regras de Negócio
+### 2.3. Regras de Negócio
 As regras de negócio definem restrições e condições que devem ser respeitadas no uso do aplicativo.
 Identificador	Descrição	Escopo	Prioridade
 RN01	Não permitir dois alunos para o mesmo personal trainer no mesmo horário.	Agendamento	Alta
@@ -103,10 +84,7 @@ RN03	O treino deve ser cancelado antes do horário marcado.	Agendamento	Média
 RN04	Somente usuários autorizados podem acessar dados dos alunos.	Segurança	Alta
 RN05	O personal trainer deve registrar o atendimento após o treino.	Atendimento	Alta
 
-
-Observações de fidelidade ao documento: a fonte utiliza, em alguns pontos, termos como “clínica”, “paciente” e “consulta”, que foram padronizados neste README para “academia”, “aluno” e “treino” por serem os termos do projeto. A regra RN02 aparece incompleta no PDF e foi redigida a partir de seu sentido aparente. Além disso, a história de login identifica RF01, embora a tabela de requisitos funcionais associe RF01 ao cadastro de aluno. Essas divergências precisam ser confirmadas pela equipe. Os limites de 2 segundos para autenticação e 3 segundos para apresentação de informações foram preservados como aparecem na fonte.
-
-3. Diagramas UML
+## 3. Diagramas UML
 Os diagramas a seguir representam os três casos de uso apresentados no documento original: Cadastrar, Logar e Encerrar Sessão. Os códigos Mermaid permitem visualizar os fluxos diretamente no README do GitHub.
 3.1. Diagramas de Casos de Uso
 Visão dos casos de uso
@@ -157,7 +135,7 @@ Validação	Não se aplica.
 
 
 Fluxo principal: o usuário clica em Logout, o sistema encerra a sessão e redireciona o usuário à tela de login.
-3.2. Diagramas de Sequência
+### 3.2. Diagramas de Sequência
 Os diagramas de sequência representam a comunicação entre o Usuário, a Interface, o Controlador e o Banco de Dados nos principais fluxos de acesso à aplicação.
 Sequência — Cadastrar
 ```mermaid
@@ -218,7 +196,7 @@ sequenceDiagram
     C-->>I: Sessão encerrada
     I-->>U: Redirecionar à tela de login
 ```
-3.3. Diagramas de Atividades
+### 3.3. Diagramas de Atividades
 O diagrama de atividades do documento apresenta o processo de login, desde o preenchimento dos campos até a verificação das credenciais.
 Atividade — Realizar Login
 ```mermaid
@@ -231,4 +209,4 @@ flowchart TD
     D -->|Não| G[Voltar para a tela de login]
     G --> B
 ```
-Nota: o README apresenta a estrutura pedida na atividade. Os diagramas foram reexpressos em Mermaid a partir dos diagramas e dos fluxos do PDF; o diagrama de casos de uso é uma representação simplificada em fluxograma, pois Mermaid não oferece uma notação nativa de casos de uso UML. Para uma entrega que exija notação UML estrita, substitua esse fluxograma pela imagem original ou por uma versão produzida em ferramenta UML.
+
