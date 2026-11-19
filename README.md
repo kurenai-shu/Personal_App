@@ -29,30 +29,33 @@ Desenvolvedor	Responsável pela manutenção e pelo funcionamento adequado da ap
 Para identificar os requisitos, são utilizadas as siglas: RF (Requisito Funcional), RNF (Requisito Não Funcional), RN (Regra de Negócio), RU (Requisito de Usuário), RS (Requisito de Sistema) e RSW (Requisito de Software).
 ### 2.1. Requisitos Funcionais
 
-Identificador	Descrição	Escopo	Prioridade
-RF01	Cadastrar aluno.	Funcional	Alta
-RF02	Agendar horário.	Funcional	Alta
-RF03	Consultar agenda do personal trainer.	Funcional	Alta
-RF04	Cancelar treinos.	Funcional	Média
-RF05	Registrar atendimento.	Funcional	Alta
+| Identificador | Descrição | Escopo | Prioridade |
+|---|---|---|---|
+| RF01 | Cadastrar aluno. |	Funcional |	Alta|
+|RF02|	Agendar horário.|	Funcional|	Alta|
+|RF03|	Consultar agenda do personal trainer.|	Funcional|	Alta|
+|RF04|	Cancelar treinos.|	Funcional|	Média|
+|RF05|	Registrar atendimento.|	Funcional|	Alta|
 
 ### Requisitos de Usuário (RU)
-Identificador	Descrição
-RU01	O usuário deve poder fazer login utilizando e-mail ou número de telefone.
-RU02	O usuário deve poder escolher se entrará como aluno ou personal trainer.
-RU03	O usuário deve poder escolher o método de pagamento: Pix, dinheiro ou cartão.
-RU04	O usuário deve poder utilizar filtros para encontrar um resultado que o agrade.
-RU05	O usuário deve poder criar seu perfil com as informações necessárias, conforme o tipo de acesso (aluno ou personal trainer).
+|Identificador	|Descrição|
+|---|---|
+|RU01|	O usuário deve poder fazer login utilizando e-mail ou número de telefone.|
+|RU02|	O usuário deve poder escolher se entrará como aluno ou personal trainer.|
+|RU03|	O usuário deve poder escolher o método de pagamento: Pix, dinheiro ou cartão.|
+|RU04|	O usuário deve poder utilizar filtros para encontrar um resultado que o agrade.|
+|RU05|	O usuário deve poder criar seu perfil com as informações necessárias, conforme o tipo de acesso (aluno ou personal trainer).|
 
 
 ### Requisitos de Sistema (RS)
-Identificador	Descrição	Requisitos relacionados
-RS01	Permitir que o usuário informe e-mail ou telefone e senha para efetuar login ou cadastro de acesso.	RU01
-RS02	Permitir a seleção do perfil de acesso (aluno ou personal trainer) durante o cadastro ou a autenticação.	RU02
-RS03	Permitir pagamentos via Pix, dinheiro ou cartão, processando a transação corretamente.	RU03
-RS04	Oferecer filtros por faixa de preço, especialidade e horários disponíveis na busca por personal trainers.	RU04
-RS05	Permitir a criação e a personalização do perfil conforme o tipo de usuário.	RU05
-RS06	Permitir encerrar a sessão ativa com segurança (logout) e retornar à tela de login.	RU01, RU02
+|Identificador|	Descrição|	Requisitos relacionados|
+|---|---|---|
+|RS01|	Permitir que o usuário informe e-mail ou telefone e senha para efetuar login ou cadastro de acesso.|	RU01|
+|RS02|	Permitir a seleção do perfil de acesso (aluno ou personal trainer) durante o cadastro ou a autenticação.|	RU02|
+|RS03|	Permitir pagamentos via Pix, dinheiro ou cartão, processando a transação corretamente.|	RU03|
+|RS04|	Oferecer filtros por faixa de preço, especialidade e horários disponíveis na busca por personal trainers.|	RU04|
+|RS05|	Permitir a criação e a personalização do perfil conforme o tipo de usuário.|	RU05|
+|RS06|	Permitir encerrar a sessão ativa com segurança (logout) e retornar à tela de login.	RU01| RU02|
 
 
 ### Requisitos de Software (RSW)
